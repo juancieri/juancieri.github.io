@@ -10,6 +10,17 @@
 @import 'layout/_grid';
 
 // COMMMON
+html, body {
+    font-size: 16px;
+}
+::selection {
+    background: $primary-color;
+    color: $white;
+}
+::-moz-selection {
+    background: $primary-color;
+    color: $white;
+}
 
 @import 'layout/_header';
 @import 'layout/_footer';

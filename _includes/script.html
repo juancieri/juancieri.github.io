@@ -6,6 +6,16 @@
 <script src="{{ "/assets/js/validator.min.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/placeholder.min.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/owl.carousel.min.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/typed.min.js" | relative_url }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
-<script>new WOW().init();</script>
+<script>
+    new WOW().init();
+</script>
+
+{% if page.layout == "home" %}
+    <script>
+        window.onload = initVideoHeader();
+        window.onload = initTyped();
+    </script>
+{% endif %}

@@ -2,7 +2,49 @@
 layout: default
 ---
 
-<div class="home">
+<!-- VIDEO HEADER-->
+<div class="homepage-hero-module">
+
+    <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            
+            <source src="{{ "/assets/img/video-header.mp4" | relative_url }}" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="{{ "/assets/img/video-header.webm" | relative_url }}" type="video/webm">Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="{{ "/assets/img/video-header.ogv" | relative_url }}" type="video/ogv">Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden"><img src="{{ "/assets/img/video-header.jpg" | relative_url }}" alt="Video header"></div>
+    </div>
+
+    <div id="welcome">
+        <div>
+            <h1 data-wow-delay="0.3s" class="wow fadeInDown header-title">Soy juan cieri</h1>
+            <h2 id="typed" class="header-subtitle"></h2>
+            <div id="typed-strings">
+                <p>Soy diseñador gráfico</p>
+                <p>Soy desarrollador de front-end</p>
+                <p>Diseñador gráfico &amp; desarrollador de front-end</p>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <ul id="border">
+        <li class="vert left"></li>
+        <li class="vert right"></li>
+        <li class="hori top"></li>
+        <li class="hori bottom"></li>
+    </ul>
+
+    <span class="scroll-btn">
+        <a href="#next" class="scroll"><span class="mouse"><span></span></span></a>
+        <p>scroll me</p>
+    </span>
+
+</div>
+<!-- /VIDEO HEADER -->
+
+<div id="next" class="home">
 
   <h1 class="page-heading">Posts</h1>
   
