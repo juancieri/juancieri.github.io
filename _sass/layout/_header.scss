@@ -1,0 +1,13 @@
+// HEADER
+
+header {  
+}
+
+#nav {
+    background: none;
+    z-index: 5;
+    border: 0;
+    @include border-radius(0px);
+    transition: 0.3s;
+    margin: 0;
+}

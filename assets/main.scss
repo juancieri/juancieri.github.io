@@ -3,3 +3,20 @@
 ---
 
 @import "minima";
+
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'components/_fonts';
+@import 'layout/_grid';
+
+// COMMMON
+
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'components/_carousel';
+
+// PAGES
+@import 'pages/_home';
+
+// CUSTOM SCROLLBAR
+@include scrollbars(.5em, $primary-color);
