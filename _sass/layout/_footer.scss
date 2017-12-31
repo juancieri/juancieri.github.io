@@ -1,4 +1,19 @@
 // FOOTER
-
 footer {
+    
+    & > .container {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    
+    address {
+        min-height: 100%;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
 }
