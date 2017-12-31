@@ -183,6 +183,7 @@
            transform: rotate(0deg); 
             display: block;
             margin: 0 auto 4px auto;
+            @include border-radius(0px);
 
             &:last-child {
                 margin: 0 auto;

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2017-12-25 13:29:39 -0300
+title:  "Welcome 2!"
+date:   2017-12-24 13:29:39 -0300
 image: /assets/img/video-header.jpg
 long_description: 'esta es la descripcion larga'
 categories: blog

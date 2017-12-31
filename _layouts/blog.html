@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{% include page-header.html %}
+
+<div class="container-fluid">
+    
+    {% for post in site.posts %}
+
+        {% cycle 'add row' : '<div class="row">', '' %}
+
+            <div class="col-xs-12 col-sm-6">
+                <article class="blog-item">
+                    <div class="blog-item-image-container">
+                        <a href="{{ post.url | relative_url }}" style="background-image: url({{ post.image }});"></a>
+                    </div>
+                    <div class="blog-item-details">
+                        <h4 class="blog-item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                        <p class="date"><em>{{ post.date | date: "%b %d, %Y" }}</em></p>
+                        <div class="blog-item-content">
+                            <p>{{ post.long_description }}</p>
+                            <a href="{{ post.url | relative_url }}" class="blog-item-link">Leer más <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        {% cycle 'end row' : '', '</div>' %}
+
+    {% endfor %}
+    {% cycle 'end row' : '', '</div>' %}
+    
+</div>

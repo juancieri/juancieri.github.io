@@ -1,0 +1,113 @@
+// POST
+.post-header {
+    @media (max-width: 768px) {
+        .container, .col-xs-12 {
+            padding: 0;
+        }
+        .row {
+            margin: 0;
+        }
+    }
+    &-cover {
+        margin-top: 50px;
+        height: 500px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.post-content {
+    background-color: $white;
+    
+    &-date {
+        background-color: $white;
+        margin-top: -130px;
+        
+        p {
+            padding: 36px 20px;
+            float: left;
+            color: $gray;
+            font-size: 18px;
+            @include font-size(18px);
+        }
+        
+    }
+    
+    .col-md-10:hover {
+        .post-extra {
+            background-color: $black;
+            color: $white;
+        }
+    }
+    
+}
+
+.post-extra {
+    background-color: $lightgray;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    color: $gray;
+    transition: 0.3s;
+    
+    span {
+        display: block;
+        line-height: 30px;
+    }
+    
+    .day {
+        font-weight: 700;
+        font-size: 40px;
+        @include font-size(40px);
+    }
+    
+}
+
+.post-title, .post-details {
+    @media (min-width: 768px) {
+        padding-left: 115px;
+    }
+}
+
+.post-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+
+.post-nav {
+    margin-top: 30px;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+    }
+    li {
+        flex-grow: 1;
+        flex-basis: 50%;
+        border-left: 1px solid $white;
+        border-right: 1px solid $white;
+    }
+    a {
+        display: block;
+        transition: 0.3s;
+        background-color: $lightgray;
+        color: $gray;
+        padding: 15px;
+        min-height: 100%;
+        &:hover {
+            text-decoration: none;
+            background-color: $black;
+            color: $white;
+        }
+    }
+}
+

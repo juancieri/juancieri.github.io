@@ -2,24 +2,68 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+    
+    <header class="post-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="post-header-cover" style="background-image: url(../../../../../assets/img/video-header.jpg);"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="post-content" itemprop="articleBody">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-push-2">
+                    
+                    <!-- date -->
+                    <div class="post-content-date clearfix">
+                        <div class="post-extra">
+                            <div>
+                                <span class="month">{% assign date_format = site.minima.date_format | default: "%b" %} {{ page.date | date: date_format }}</span>
+                                <span class="day">{% assign date_format = site.minima.date_format | default: "%-d" %} {{ page.date | date: date_format }}</span>
+                                <span class="year">{% assign date_format = site.minima.date_format | default: "%Y" %} {{ page.date | date: date_format }}</span>
+                            </div>
+                        </div>
+                        <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ page.date | date: date_format }}</em></time></p>
+                    </div>
+                    <!-- /date -->
+                    
+                    <!-- content -->
+                    <h1 class="post-title">{{ page.title | escape }}</h1>
+                    <div class="post-details">
+                        {{ content }}
+                    </div>
+                    <!-- /content -->
+                    
+                    <!-- post nav -->
+                    <nav class="post-nav" role="nav">
+                        <ul>
+                            <li>
+                                {% if page.previous.url %}
+                                <a href="{{page.previous.url}}">
+                                    <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ page.previous.date | date: date_format }}</em>
+                                    <h6>{{page.previous.title}}</h6>
+                                </a>
+                                {% endif %}
+                            </li>
+                            <li>
+                                {% if page.next.url %}
+                                <a href="{{page.next.url}}">
+                                    <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ page.next.date | date: date_format }}</em>
+                                    <h6>{{page.next.title}}</h6>
+                                </a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /post nav -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </article>

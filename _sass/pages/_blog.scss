@@ -1,0 +1,122 @@
+// BLOG
+.blog-item {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 50px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: 0.3s;
+    
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+        border-bottom: 2px solid $black;
+    }
+    
+    &:hover {
+        -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+        .blog-item-image-container a {
+            background-size: auto 110%;
+            @media (max-width: 600px) {
+                background-size: 110% auto;
+            }
+        }
+    }
+    
+    & > div {
+        flex-grow: 1;
+        flex-basis: 50%;
+        
+        @media (max-width: 600px) {
+            flex-basis: 100%;
+        }
+        
+    }
+    
+    &-image-container {
+        
+        a {
+            display: block;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 600px) {
+            height: 200px;
+            a {
+                background-size: 100% auto;
+            }
+        }
+        
+    }
+    
+    &-details {
+        padding: 70px 50px;
+        @include media-xs {
+            padding: 30px 15px;
+        }
+    }
+    
+    &-link {
+        border: 2px solid $black;
+        transition: 0.3s;
+        padding: 10px 15px;
+        display: inline-block;
+        margin: 20px 0 0 0;
+        text-transform: uppercase;
+        color: $black;
+        font-weight: 300;
+        font-family: $raleway;
+        letter-spacing: 1px;
+        &:hover, &:focus {
+            color: $white;
+            background-color: $black;
+            text-decoration: none;
+        }
+        &:visited {
+            color: $black;
+            &:hover {
+                color: $white;
+            }
+        }
+        
+        .fa {
+            margin-left: 10px;
+        }
+        
+    }
+    
+    &-title {
+        text-transform: uppercase;
+        font-family: $roboto;
+        font-weight: 700;
+        position: relative;
+        padding: 0 0 15px 0;
+        
+        a {
+            color: $black;
+            transition: 0.3s;
+            &:hover {
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+        
+        &:before {
+            content: "";
+            height: 2px;
+            width: 20px;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+    }
+   
+}

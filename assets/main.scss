@@ -22,12 +22,50 @@ html, body {
     color: $white;
 }
 
+// BG
+.bg-black {
+    background-color: $black;
+    color: $white;
+}
+.bg-white {
+    background-color: $white;
+}
+.bg-primary {
+    background-color: $primary-color;
+}
+
+// PAGE HEADER
+.page-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../assets/img/video-header.jpg);
+    margin: 50px 0 30px 0;
+    @media (min-width: 768px) {
+        background-attachment: fixed;
+    }
+}
+.page-title {
+    text-align: center;
+    color: $white;
+    margin: 0;
+    padding: 80px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $oswald;
+    letter-spacing: 2px;
+    font-size: 50px;
+    @include font-size(50px);
+}
+
 @import 'layout/_header';
 @import 'layout/_footer';
 @import 'components/_carousel';
 
 // PAGES
 @import 'pages/_home';
+@import 'pages/_post';
+@import 'pages/_blog';
 
 // CUSTOM SCROLLBAR
 @include scrollbars(.5em, $primary-color);

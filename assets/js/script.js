@@ -107,7 +107,7 @@ function initTyped() {
 
 /* TEXT EDITOR RESPONSIVE */
 function initEditorResponsive() {
-    $('#post-content img').addClass('img-responsive');
-    $('#post-content table').addClass('table').addClass('table-striped').addClass('table-hover').wrap("<div class='table-responsive'></div>");
-    $('#post-content iframe').removeAttr('style').removeAttr('width').removeAttr('height').addClass('embed-responsive-item').wrap("<div class='embed-responsive embed-responsive-16by9'></div>");
+    $('.post-details img').addClass('img-responsive');
+    $('.post-details table').addClass('table').addClass('table-striped').addClass('table-hover').wrap("<div class='table-responsive'></div>");
+    $('.post-details iframe').removeAttr('style').removeAttr('width').removeAttr('height').addClass('embed-responsive-item').wrap("<div class='embed-responsive embed-responsive-16by9'></div>");
 }
