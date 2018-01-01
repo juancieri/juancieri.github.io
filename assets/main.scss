@@ -12,6 +12,9 @@
 // COMMMON
 html, body {
     font-size: 16px;
+    @include media-xs {
+        font-size: 14px;
+    }
 }
 ::selection {
     background: $primary-color;
@@ -25,6 +28,33 @@ html, body {
     @media (min-width: 768px) {
         display: flex;
         align-items: stretch;
+    }
+}
+.filter {
+    @include media-xs {
+        display: none;
+    }
+}
+.toTop {
+    border: none;
+    background-color: $black;
+    color: $white;
+    transition: 0.3s;
+    position: fixed;
+    right: 25px;
+    bottom: 0;
+    padding: 10px 15px;
+    outline: none;
+    opacity: 0;
+    visibility: hidden;
+    &:hover {
+        background-color: $primary-color;
+        color: $white;
+    }
+    .scrolling > & {
+        opacity: 1;
+        visibility: visible;
+        bottom: 25px;
     }
 }
 
@@ -48,6 +78,31 @@ html, body {
     font-size: 50px;
     @include font-size(50px);
     animation: glitch 3s steps(100) infinite;
+}
+
+// BUTTONS
+.btn {
+    outline: none !important;
+    transition: 0.3s;
+    text-transform: uppercase;
+    
+    &-submit {
+        display: block;
+        width: 100%;
+        background-color: $white;
+        color: $black;
+        text-align: center;
+        border: 2px solid $black;
+        font-family: $raleway;
+        @include border-radius(0px);
+        
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+        
+    }
+    
 }
 
 // BG

@@ -14,6 +14,24 @@ $(function() {
   });
 });
 
+/* ADD CLASS WHEN SCROLL */
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+        $("body").addClass("scrolling");
+    } else {
+        $("body").removeClass("scrolling");
+    }
+});
+$(document).ready(function(){
+    $('.toTop').click(function(){
+        var body = $('body');
+        $('html,body').animate({
+          scrollTop: body.offset().top
+        }, 400);
+    });
+});
+
 /* VIDEO HEADER */
 function initVideoHeader() {
     scaleVideoContainer();

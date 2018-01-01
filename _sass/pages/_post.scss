@@ -14,6 +14,10 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        @include media-xs {
+            margin-top: 0;
+            height: 250px;
+        }
     }
 }
 
@@ -78,10 +82,14 @@
     font-weight: 700;
     text-transform: uppercase;
     margin: 0 0 25px 0;
+    @include media-xs {
+        margin-top: 15px;
+    }
 }
 
 .post-nav {
     margin-top: 30px;
+    position: relative;
     ul {
         padding: 0;
         margin: 0;
@@ -95,8 +103,11 @@
         flex-basis: 50%;
         border-left: 1px solid $white;
         border-right: 1px solid $white;
+        &:nth-child(2) {
+            text-align: right;
+        }
     }
-    a {
+    li a {
         display: block;
         transition: 0.3s;
         background-color: $lightgray;
@@ -107,6 +118,31 @@
             text-decoration: none;
             background-color: $black;
             color: $white;
+        }
+    }
+    &-return {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: calc(50% - 25px);
+        top: calc(50% - 25px);
+        background-color: $white;
+        border: 2px solid $black;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa {
+            color: $black;
+            transition: 0.3s;
+        }
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            text-decoration: none;
+            .fa {
+                color: $white;
+            }
         }
     }
 }
