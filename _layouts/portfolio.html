@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% include page-header.html %}
+
+<div class="container-fluid">
+    
+    {% for project in site.categories.portfolio %}
+
+        {% cycle 'add row' : '<div class="row">', '' %}
+    
+            <div class="col-xs-12 col-sm-3">
+                <article class="project-item">
+                    <figure>
+                        <a href="{{ project.url | relative_url }}">
+                            <img src="{{ project.image }}" class="img-responsive" alt="{{ project.title }}">
+                        </a>
+                    </figure>
+                    <figcaption>
+                        <h4 class="project-item-title">{{ project.title }}</h4>
+                        <p>{{ project.long_description }}</p>
+                    </figcaption>
+                    <a href="{{ project.url | relative_url }}" class="project-item-btn">Ver proyecto</a>
+                </article>
+            </div>
+
+        {% cycle 'end row' : '', '</div>' %}
+
+    {% endfor %}
+    {% cycle 'end row' : '', '</div>' %}
+    
+</div>

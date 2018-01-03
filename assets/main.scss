@@ -245,6 +245,7 @@ html, body {
 @import 'pages/_home';
 @import 'pages/_post';
 @import 'pages/_blog';
+@import 'pages/_portfolio';
 
 // CUSTOM SCROLLBAR
 @include scrollbars(.5em, $primary-color);
