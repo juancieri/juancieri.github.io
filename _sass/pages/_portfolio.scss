@@ -1,4 +1,151 @@
 // PORTFOLIO
+#portfolio {
+    .col-xs-12 {
+        padding: 0;
+    }
+}
 .project-item {
+    border: 1px solid $white;
+    margin-bottom: 30px;
+    
+    figure {
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        
+        a {
+            display: block;
+            overflow: hidden;
+        }
+        
+        img {
+            transition: 0.3s;
+            width: 100%;
+            transform: scale(1.0);
+        }
+        
+    }
+    
+    figcaption {
+        padding: 15px;
+        overflow: hidden;
+        
+        p {
+            margin: 0;
+        }
+        
+    }
+    
+    &-title {
+        position: relative;
+        top: 0;
+        transition: 0.3s;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+    }
+    
+    &-title-hidden {
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        opacity: 0;
+        color: $white;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        span {
+            padding: 3px 15px;
+            background-color: $primary-color;
+            bottom: -100px;
+            position: relative;
+            transition: 0.3s;
+            margin: 5px;
+        }
+        
+    }
+    
+    &-btn {
+        background-color: $black;
+        color: $white;
+        text-transform: uppercase;
+        display: block;
+        margin: 10px 0 0 0;
+        text-align: center;
+        transition: 0.3s;
+        border: 3px solid $black;
+        position: relative;
+        
+        span {
+            padding: 5px 15px;
+            background-color: $black;
+            border: 3px solid $white;
+            display: block;
+        }
+        
+        &:visited {
+            color: $white;
+        }
+        
+        &:before {
+            content: "";
+            left: calc(50% - 10px);
+            top: -10px;
+            position: absolute;
+            border-bottom: 10px solid $black;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            opacity: 1;
+            transition: 0.3s;
+        }
+        
+    }
+    
+    &:hover {
+        
+        .project-item-btn {
+            text-decoration: none;
+            background-color: $white;
+            color: $black;
+            
+            span {
+                background-color: $white;
+            }
+            
+            &:before {
+                opacity: 0;
+            }
+            
+        }
+        
+        figure {
+            img {
+                transform: scale(1.2);
+            }
+        }
+        
+        .project-item-title {
+            top: -100px;
+        }
+        
+        .project-item-title-hidden {
+            opacity: 1;
+            
+            span {
+                bottom: 0px;
+            }
+            
+        }
+        
+    }
     
 }
