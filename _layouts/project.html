@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<a href="/portfolio/" class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+<article class="project" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    {% include page-header.html %}
+    
+    <div class="project-tags">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>{{ page.tags }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <img src="{{ page.main-image }}" alt="{{ page.title }}" class="img-reponsive main-img">
+            </div>
+            <div class="col-sm-4">
+                <h2 class="project-title">{{page.title}}</h2>
+                <p>{{page.description}}</p>
+                <p>Las tecnologías utilizadas para el desarrollo del proyecto fueron:</p>
+                <ul class="list">
+                    {{page.skill}}
+                </ul>
+                <a href="{{page.link}}" class="project-link" target="_blank">{{page.link}}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    
+</article>

@@ -1,0 +1,52 @@
+// PROJECT
+.project {
+    padding-bottom: 50px;
+    
+    .page-header {
+        margin-bottom: 0px;
+    }
+    
+    &-tags {
+        margin: 0 0 30px 0;
+        
+        p {
+            display: block;
+            margin: 0;
+            border-left: 6px solid $primary-color;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 12px;
+            @include font-size(12px);
+            color: $gray;
+            background-color: $lightgray;
+        }
+        
+    }
+    
+    .main-img {
+        margin-bottom: 15px;
+    }
+    
+}
+
+.close-btn {
+    background-color: $primary-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 16px;
+    @include border-radius(0);
+    font-size: 18px;
+    @include font-size(18px);
+    display: inline-block;
+    z-index: 10;
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: $black;
+    }
+    
+    .fa {
+        color: $white;
+    }
+}

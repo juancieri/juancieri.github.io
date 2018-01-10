@@ -57,6 +57,45 @@ html, body {
         bottom: 25px;
     }
 }
+img {
+    &.half {
+        display: inline-block;
+        width: calc(50% - 8px);
+        float: left;
+        margin: 0 15px 15px 0;
+        box-sizing: border-box;
+        
+        &:nth-child(even) {
+            margin: 0 0 15px 0;
+        }
+        
+        @include media-xs {
+            margin: 0 0 15px 0;
+            width: 100%;
+            float: none;
+            display: block;
+        }
+        
+    }
+    &.full {
+        width: 100%;
+        dislay: block;
+        margin-bottom: 15px;
+    }
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        &:before {
+            content: "\f046";
+            font-family: "FontAwesome";
+            margin-right: 10px;
+        }
+    }
+}
 
 // TITLES
 .section-title {
@@ -85,24 +124,6 @@ html, body {
     outline: none !important;
     transition: 0.3s;
     text-transform: uppercase;
-    
-    &-submit {
-        display: block;
-        width: 100%;
-        background-color: $white;
-        color: $black;
-        text-align: center;
-        border: 2px solid $black;
-        font-family: $raleway;
-        @include border-radius(0px);
-        
-        &:hover {
-            background-color: $black;
-            color: $white;
-        }
-        
-    }
-    
 }
 
 // BG
@@ -240,10 +261,12 @@ html, body {
 @import 'layout/_header';
 @import 'layout/_footer';
 @import 'components/_carousel';
+@import 'components/_forms';
 
 // PAGES
 @import 'pages/_home';
 @import 'pages/_post';
+@import 'pages/_project';
 @import 'pages/_blog';
 @import 'pages/_portfolio';
 

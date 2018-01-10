@@ -18,36 +18,34 @@
             </div>
             <div class="col-xs-12 col-sm-6">
                 <div class="footer-form">
-                    <form role="form" class="form" action="sendmail.php" data-toggle="validator">
+                    <form role="form" class="form" action="https://formspree.io/jic.cieri@gmail.com" data-toggle="validator" method="POST">
                         <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" required data-required-error="Campo Obligatorio">
+                            <input type="text" name="nombre" class="form-control" required data-required-error="Campo Obligatorio" placeholder="Nombre">
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" class="form-control" required data-required-error="Campo Obligatorio">
+                            <input type="email" name="_replyto" class="form-control" required data-required-error="Campo Obligatorio" placeholder="E-mail">
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="text" name="telefono" class="form-control" required data-required-error="Campo Obligatorio">
+                            <input type="tel" name="telefono" class="form-control" required data-required-error="Campo Obligatorio" placeholder="Teléfono">
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea name="mensaje" class="form-control" required data-required-error="Campo Obligatorio"></textarea>
+                            <textarea name="mensaje" class="form-control" required data-required-error="Campo Obligatorio" placeholder="Mensaje"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button>
+                            <button type="submit" name="submit" class="btn btn-submit">
+                                <span><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</span>
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyright bg-black">
+    <div class="copyright bg-white">
         <div class="container">
             <div class="col-xs-12 col-sm-6">
                 Copyright 2018 - Todos los derechos reservados
