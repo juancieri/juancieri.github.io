@@ -38,6 +38,49 @@ layout: default
                 {{ content }}
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- post nav -->
+                <nav class="post-nav" role="nav">
+                    <a href="/blog/" class="post-nav-return" data-toggle="tooltip" data-placement="top" data-title="Volver al blog"><i class="fa fa-th-large"></i></a>
+                    <ul>
+                        {% for post in site.categories.portfolio %}
+                            {% if post.url == page.url %}
+                                {% assign post_index0 = forloop.index0 %}
+                                {% assign post_index1 = forloop.index %}
+                            {% endif %}
+                        {% endfor %}
+                        {% for post in site.categories.portfolio %}
+                            {% if post_index0 == forloop.index %}
+                                {% assign next_post = post.url %}
+                                {% assign next_post_title = post.title %}
+                                {% assign next_post_date = post.date %}
+                            {% endif %}
+                            {% if post_index1 == forloop.index0 %}
+                                {% assign prev_post = post.url %}
+                                {% assign prev_post_title = post.title %}
+                                {% assign prev_post_date = post.date %}
+                            {% endif %}
+                        {% endfor %}
+                        <li>
+                            {% if prev_post %}
+                            <a href="{{ prev_post }}">
+                                <h4>{{prev_post_title}}</h4>
+                            </a>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if next_post %}
+                            <a href="{{ next_post }}">
+                                <h4>{{next_post_title}}</h4>
+                            </a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /post nav -->
+            </div>
+        </div>
     </div>
     
 </article>

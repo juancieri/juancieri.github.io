@@ -4,12 +4,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    
+  <!-- meta tags -->
+  <META NAME="subject" CONTENT="Portfolio Personal">
+  <META NAME="Classification" CONTENT="Soy diseñador gráfico y desarrollador web con más de 5 años de experiencia. Ofrezco soluciones integrales a empresas y particulares para mejorar su presencia online. Diseño web, posicionamiento web, marketing online y mucho más.">
+  <META NAME="Keywords" CONTENT="diseño gráfico, paginas web, diseño web, desarrollo web, desarrollo de front end, ecommerce, marketing online, google adwords, social media, redes sociales">
+  <META NAME="Geography" CONTENT="Ciudad Autónoma de Buenos Aires, Buenos Aires, Argentina">
+  <META NAME="Language" CONTENT="Spanish">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="PUBLIC">
+  <META NAME="Copyright" CONTENT="Juan Cieri">
+  <META NAME="Designer" CONTENT="Juan Cieri">
+  <META NAME="Publisher" CONTENT="Juan Cieri - Diseño Gráfico & Desarrollo Web">
+  <META NAME="distribution" CONTENT="Global">
+  <META NAME="zipcode" CONTENT="1235">
+  <META NAME="city" CONTENT="Caballito">
+  <META NAME="country" CONTENT="Argentina">
+    
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="robots" content="index,follow"/>
   <meta name="GOOGLEBOT" content="index,follow"/>
   <meta name="category" content="web design"/>
   <meta name="author" content="Juan Cieri"/>
-  <meta name="keywords" content=""/>
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
@@ -20,7 +35,7 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     
   <!-- JQuery-->
-  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <!-- Font Awesome-->
   <script src="https://use.fontawesome.com/c017ea6a5a.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]>
@@ -30,9 +45,9 @@
   <!-- Facebook Open Graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
+  <meta property="og:url" content="{{site.url}}" />
   <meta property="og:image" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}

@@ -42,19 +42,37 @@ layout: default
                     <nav class="post-nav" role="nav">
                         <a href="/blog/" class="post-nav-return" data-toggle="tooltip" data-placement="top" data-title="Volver al blog"><i class="fa fa-th-large"></i></a>
                         <ul>
+                            {% for post in site.categories.blog %}
+                                {% if post.url == page.url %}
+                                    {% assign post_index0 = forloop.index0 %}
+                                    {% assign post_index1 = forloop.index %}
+                                {% endif %}
+                            {% endfor %}
+                            {% for post in site.categories.blog %}
+                                {% if post_index0 == forloop.index %}
+                                    {% assign next_post = post.url %}
+                                    {% assign next_post_title = post.title %}
+                                    {% assign next_post_date = post.date %}
+                                {% endif %}
+                                {% if post_index1 == forloop.index0 %}
+                                    {% assign prev_post = post.url %}
+                                    {% assign prev_post_title = post.title %}
+                                    {% assign prev_post_date = post.date %}
+                                {% endif %}
+                            {% endfor %}
                             <li>
-                                {% if page.previous.url %}
-                                <a href="{{page.previous.url}}">
-                                    <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ page.previous.date | date: date_format }}</em>
-                                    <h6>{{page.previous.title}}</h6>
+                                {% if prev_post %}
+                                <a href="{{ prev_post }}">
+                                    <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ prev_post_date | date: date_format }}</em>
+                                    <h6>{{prev_post_title}}</h6>
                                 </a>
                                 {% endif %}
                             </li>
                             <li>
-                                {% if page.next.url %}
-                                <a href="{{page.next.url}}">
-                                    <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ page.next.date | date: date_format }}</em>
-                                    <h6>{{page.next.title}}</h6>
+                                {% if next_post %}
+                                <a href="{{ next_post }}">
+                                    <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ next_post_date | date: date_format }}</em>
+                                    <h6>{{next_post_title}}</h6>
                                 </a>
                                 {% endif %}
                             </li>
