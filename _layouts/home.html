@@ -44,25 +44,73 @@ layout: default
 </div>
 <!-- /VIDEO HEADER -->
 
-<div id="next" class="home">
+<!-- ULTIMAS NOTICIAS -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1 class="page-heading">Últimas noticias</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="lastPostCarousel" class="owl-carousel post-carousel">
+                    {% for post in site.categories.blog limit:3 %}
+                    <div class="item">
+                        <article class="blog-item">
+                            <div class="blog-item-image-container">
+                                <a href="{{ post.url | relative_url }}" style="background-image: url({{ post.image }});"></a>
+                            </div>
+                            <div class="blog-item-details">
+                                <h4 class="blog-item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                                <p class="date"><em>{{ post.date | date: "%b %d, %Y" }}</em></p>
+                                <div class="blog-item-content">
+                                    <p>{{ post.long_description }}</p>
+                                    <a href="{{ post.url | relative_url }}" class="blog-item-link">Leer más <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /ULTIMAS NOTICIAS -->
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+<!-- ULTIMOS PROYECTOS -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1 class="page-heading">Últimos proyectos</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="lastProjectCarousel" class="owl-carousel post-carousel">
+                    {% for project in site.categories.portfolio limit:3 %}
+                    <div class="item">
+                        <article class="project-item">
+                            <figure>
+                                <a href="{{ project.url | relative_url }}">
+                                    <div class="project-item-square"><span></span></div>
+                                    <img src="{{ project.image }}" class="img-responsive" alt="{{ project.title }}">
+                                    <h4 class="project-item-title-hidden"><span>{{ project.title }}</span></h4>
+                                </a>
+                            </figure>
+                            <figcaption>
+                                <h4 class="project-item-title">{{ project.title }}</h4>
+                                <p>{{ project.long_description }}</p>
+                            </figcaption>
+                            <a href="{{ project.url | relative_url }}" class="project-item-btn"><span>Ver proyecto</span></a>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /ULTIMOS PROYECTOS -->

@@ -120,3 +120,26 @@
     }
    
 }
+
+.owl-carousel {
+    .blog-item {
+        flex-wrap: wrap;
+        & > div {
+            flex-basis: 100%;
+        }
+        &-image-container {
+            height: 150px;
+            a {
+                background-size: cover;
+            }
+        }
+        &-details {
+            padding: 30px 15px;
+        }
+        &:hover {
+            .blog-item-image-container a {
+                background-size: cover;
+            }
+        }
+    }
+}

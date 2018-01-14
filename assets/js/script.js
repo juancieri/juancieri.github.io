@@ -129,3 +129,32 @@ function initEditorResponsive() {
     $('.post-details table').addClass('table').addClass('table-striped').addClass('table-hover').wrap("<div class='table-responsive'></div>");
     $('.post-details iframe').removeAttr('style').removeAttr('width').removeAttr('height').addClass('embed-responsive-item').wrap("<div class='embed-responsive embed-responsive-16by9'></div>");
 }
+
+/* POST CAROUSEL */
+function initPostCarousel() {
+    $('.post-carousel').owlCarousel({
+        merge:false,
+        loop:false,
+        margin:10,
+        lazyLoad:false,
+        center:false,
+        nav: true,
+        navText: [
+           "<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>",
+            "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"
+        ],
+        autoplay: true,
+        autoplayTimeout: 100,
+        autoplayHoverPause: true,
+        dots: false,
+        dotsEach: false,
+        responsive : {
+            0 : {
+                items: 1,
+            },
+            480 : {
+                items: 3
+            }
+        },
+    });
+}
