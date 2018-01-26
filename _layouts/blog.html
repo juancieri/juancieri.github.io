@@ -13,7 +13,7 @@ layout: default
             <div class="col-xs-12 col-sm-6">
                 <article class="blog-item">
                     <div class="blog-item-image-container">
-                        <a href="{{ post.url | relative_url }}" style="background-image: url({{ post.image }});"></a>
+                        <a href="{{ post.url | relative_url }}" style="background-image: url(/assets/img/{{post.image }});"></a>
                     </div>
                     <div class="blog-item-details">
                         <h4 class="blog-item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>

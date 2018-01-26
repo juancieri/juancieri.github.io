@@ -30,7 +30,8 @@ layout: default
                 <ul class="list">
                     {{page.skill}}
                 </ul>
-                <a href="{{page.link}}" class="project-link" target="_blank">{{page.link}}</a>
+                <p>{{page.para}}</p>
+                <a href="{{page.link}}" class="project-link" target="_blank" rel="nofollow">{{page.link}}</a>
             </div>
         </div>
         <div class="row">
@@ -42,7 +43,7 @@ layout: default
             <div class="col-xs-12">
                 <!-- post nav -->
                 <nav class="post-nav" role="nav">
-                    <a href="/blog/" class="post-nav-return" data-toggle="tooltip" data-placement="top" data-title="Volver al blog"><i class="fa fa-th-large"></i></a>
+                    <a href="/portfolio/" class="post-nav-return" data-toggle="tooltip" data-placement="top" data-title="Volver al portfolio"><i class="fa fa-th-large"></i></a>
                     <ul>
                         {% for post in site.categories.portfolio %}
                             {% if post.url == page.url %}

@@ -50,6 +50,7 @@ layout: default
         <div class="row">
             <div class="col-xs-12 text-center">
                 <h1 class="page-heading">Últimas noticias</h1>
+                <a href="/blog/" class="btn-more">Ver más  <span><i class="fa fa-plus"></i></span></a>
             </div>
         </div>
         <div class="row">
@@ -59,7 +60,7 @@ layout: default
                     <div class="item">
                         <article class="blog-item">
                             <div class="blog-item-image-container">
-                                <a href="{{ post.url | relative_url }}" style="background-image: url({{ post.image }});"></a>
+                                <a href="{{ post.url | relative_url }}" style="background-image: url(/assets/img/{{ post.image }});"></a>
                             </div>
                             <div class="blog-item-details">
                                 <h4 class="blog-item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
@@ -85,6 +86,7 @@ layout: default
         <div class="row">
             <div class="col-xs-12 text-center">
                 <h1 class="page-heading">Últimos proyectos</h1>
+                <a href="/portfolio/" class="btn-more">Ver más  <span><i class="fa fa-plus"></i></span></a>
             </div>
         </div>
         <div class="row">
@@ -96,7 +98,7 @@ layout: default
                             <figure>
                                 <a href="{{ project.url | relative_url }}">
                                     <div class="project-item-square"><span></span></div>
-                                    <img src="{{ project.image }}" class="img-responsive" alt="{{ project.title }}">
+                                    <img src="{{ project.main-image }}" class="img-responsive" alt="{{ project.title }}">
                                     <h4 class="project-item-title-hidden"><span>{{ project.title }}</span></h4>
                                 </a>
                             </figure>

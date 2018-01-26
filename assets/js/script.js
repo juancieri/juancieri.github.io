@@ -101,9 +101,11 @@ function scaleBannerVideoSize(element){
 $(document).ready(function(){
     $('#toggleMenu').click(function(){
         $('#menu').toggleClass('open');
+        $('.page-overlay').fadeIn('fast');
     });
-    $('#closeMenu').click(function(){
+    $('#closeMenu, .page-overlay').click(function(){
         $('#menu').removeClass('open');
+        $('.page-overlay').fadeOut('fast');
     });
     $('#menu').on('swipeleft', function(){
         $('#menu').removeClass('open')
@@ -157,4 +159,61 @@ function initPostCarousel() {
             }
         },
     });
+}
+
+/* GRID */
+function getHashFilter() {
+  var hash = location.hash;
+  // get filter=filterName
+  var matches = location.hash.match( /filter=([^&]+)/i );
+  var hashFilter = matches && matches[1];
+  return hashFilter && decodeURIComponent( hashFilter );
+}
+
+function initGrid() {
+    var $grid = $('#portfolio').isotope({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+
+    $grid.imagesLoaded().progress( function() {$grid.isotope('layout');});
+
+    $('.collapse').on('shown.bs.collapse', function () {
+        $grid.isotope('layout');
+    });
+    $('.collapse').on('hidden.bs.collapse', function () {
+        $grid.isotope('layout');
+    });
+
+  // bind filter button click
+  var $filters = $('.nav-filter li').on( 'click', 'button', function() {
+    var filterAttr = $( this ).attr('data-filter');
+    // set filter in hash
+    location.hash = 'filter=' + encodeURIComponent( filterAttr );
+  });
+
+  var isIsotopeInit = false;
+
+  function onHashchange() {
+    var hashFilter = getHashFilter();
+    if ( !hashFilter && isIsotopeInit ) {
+      return;
+    }
+    isIsotopeInit = true;
+    // filter isotope
+    $grid.isotope({
+      itemSelector: '.grid-item',
+      filter: hashFilter
+    });
+    // set selected class on button
+    if ( hashFilter ) {
+      $filters.find('.is-checked').removeClass('is-checked');
+      $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+    }
+  }
+
+  $(window).on( 'hashchange', onHashchange );
+  // trigger event handler to init Isotope
+  onHashchange();
 }

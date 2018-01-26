@@ -1,0 +1,19 @@
+---
+layout: project
+title:  "Muevent"
+date:   2017-1-14 00:00:00 -0300
+image: /assets/img/video-header.jpg
+main-image: '/assets/img/muevent/thumb.png'
+long_description: 'Diseño y maquetación de tienda online de alquiler de mobiliario'
+description: ''
+link: 'muevent.com'
+categories: portfolio
+tags: 'diseño web, maquetación web, desarrollo front end, responsive design, tienda online, ecommerce'
+filter: 'diseno-web maquetacion-web tienda-online'
+skill: <li>HTML5</li><li>CSS3</li><li>JavaScript (JQuery)</li><li>Bootstrap</li><li>PHP</li>
+---
+
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .half}
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .half}
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .full}
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .full}

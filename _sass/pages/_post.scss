@@ -47,6 +47,23 @@
     
 }
 
+.post-details {
+    p:first-child {
+        &:first-letter {
+            color: $white;
+            background-color: $black;
+            padding: 0 10px;
+            font-weight: 900;
+            font-size: 60px;
+            @include font-size(60px);
+            line-height: 70px;
+            @include line-height(70px);
+            float: left;
+            margin-right: 10px;
+        }
+    }
+}
+
 .post-extra {
     background-color: $lightgray;
     width: 100px;
@@ -88,8 +105,10 @@
 }
 
 .post-nav {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
+    z-index: 10;
     ul {
         padding: 0;
         margin: 0;

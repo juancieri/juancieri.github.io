@@ -282,3 +282,53 @@
 	-moz-animation: ani-mouse 2.5s linear infinite;
 	animation: ani-mouse 2.5s linear infinite;
 }
+
+.btn-more {
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    @include font-size(18px);
+    border: 3px solid $black;
+    top: 20px;
+    z-index: 3;
+    display: inline-block;
+    color: $white;
+    transition: 0.3s;
+    text-align: left;
+    overflow: hidden;
+    padding: 5px 0 5px 15px;
+    background-color: $black;
+    width: 100%;
+    max-width: 120px;
+    
+    span {
+        display: inline-block;
+        background-color: $black;
+        color: $white;
+        padding: 5px 15px;
+        margin-left: 15px;
+        width: 44px;
+        position: absolute;
+        right: -100%;
+        top: 0;
+        transition: 0.3s;
+    }
+    
+    &:hover {
+        text-decoration: none;
+        background-color: $white;
+        color: $black;
+        max-width: 164px;
+        span {
+            right: 0;
+        }
+    }
+    &:visited {
+        color: $white;
+        &:hover {
+            color: $black;
+        }
+    }
+}

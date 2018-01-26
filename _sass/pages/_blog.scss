@@ -118,6 +118,20 @@
         }
         
     }
+    
+    &-content {
+        p {
+            font-size: 12px;
+            @include font-size(12px);
+        }
+    }
+    
+    .date {
+        font-size: 12px;
+        @include font-size(12px);
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
    
 }
 

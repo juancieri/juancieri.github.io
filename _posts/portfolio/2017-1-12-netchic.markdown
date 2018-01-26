@@ -1,0 +1,20 @@
+---
+layout: project
+title:  "Tienda de Indumentaria"
+date:   2017-1-14 00:00:00 -0300
+image: /assets/img/video-header.jpg
+main-image: '/assets/img/netchic/thumb.png'
+long_description: 'Maquetación de Tienda Online Ecommerce para marca de Indumentaria'
+description: ''
+link: ''
+categories: portfolio
+tags: 'maquetación web, desarrollo front end, responsive design, tienda online, ecommerce'
+para: 'Proyecto desarrollado para: BUPPIT'
+filter: 'maquetacion-web tienda-online'
+skill: <li>HTML5</li><li>CSS3</li><li>JavaScript (JQuery)</li><li>Bootstrap</li><li>PHP</li><li>Responsive Design</li>
+---
+
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .half}
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .half}
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .full}
+![alt text](/assets/img/video-header.jpg "Logo Title Text 1"){: .full}

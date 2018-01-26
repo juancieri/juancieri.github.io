@@ -4,18 +4,33 @@ layout: default
 
 {% include page-header.html %}
 
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <ul class="nav-filter">
+                <li><button type="button" data-filter="*">Todos</button></li>
+                <li><button type="button" data-filter=".diseno-web">Diseño Web</button></li>
+                <li><button type="button" data-filter=".maquetacion-web">Maquetación Web</button></li>
+                <li><button type="button" data-filter=".sitio-web">Sitio web</button></li>
+                <li><button type="button" data-filter=".tienda-online">Tienda online</button></li>
+                <li><button type="button" data-filter=".diseno-grafico">Diseño Gráfico</button></li>
+            </ul>
+        </div>
+    </div>
+</div>    
+
 <div class="container-fluid" id="portfolio">
     
-    {% for project in site.categories.portfolio %}
-
-        {% cycle 'add row' : '<div class="row">', '' %}
+    <div class="grid-sizer col-xs-12 col-md-3"></div>
     
-            <div class="col-xs-12 col-sm-3">
+    {% for project in site.categories.portfolio %}
+    
+            <div class="grid-item col-xs-12 col-sm-3 {{project.filter}}">
                 <article class="project-item">
                     <figure>
                         <a href="{{ project.url | relative_url }}">
                             <div class="project-item-square"><span></span></div>
-                            <img src="{{ project.image }}" class="img-responsive" alt="{{ project.title }}">
+                            <img src="{{ project.main-image }}" class="img-responsive" alt="{{ project.title }}">
                             <h4 class="project-item-title-hidden"><span>{{ project.title }}</span></h4>
                         </a>
                     </figure>
@@ -27,9 +42,6 @@ layout: default
                 </article>
             </div>
 
-        {% cycle 'end row' : '', '</div>' %}
-
     {% endfor %}
-    {% cycle 'end row' : '', '</div>' %}
     
 </div>
