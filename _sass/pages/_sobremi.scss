@@ -1,0 +1,29 @@
+// SOBRE MI
+#pinContainer {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 800px;
+}
+.panel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+
+.bg {
+    &-1 {
+        background-color: red;
+    }
+    &-2 {
+        background-color: blue;
+    }
+    &-3 {
+        background-color: green;
+    }
+    &-4 {
+        background-color: yellow;
+    }
+}
