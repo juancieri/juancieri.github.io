@@ -1,0 +1,20 @@
+---
+layout: project
+title:  "Swift Daily"
+date:   2016-2-2 00:00:00 -0300
+image: /assets/img/swift/01.jpg
+main-image: '/assets/img/swift/thumb.jpg'
+long_description: 'Diseño de periódico'
+description: 'Diseño de periódico'
+link: ''
+categories: portfolio
+tags: 'diseño gráfico, diseño editorial'
+para: ''
+filter: 'diseno-grafico'
+skill: 
+---
+
+![alt text](/assets/img/swift/01.jpg "Swift Daily"){: .full}
+![alt text](/assets/img/swift/02.jpg "Swift Daily"){: .full}
+![alt text](/assets/img/swift/03.jpg "Swift Daily"){: .full}
+![alt text](/assets/img/swift/04.jpg "Swift Daily"){: .full}

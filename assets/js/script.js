@@ -231,9 +231,9 @@ function initScrollMagic(){
             triggerHook: 0.4
         })
         .setClassToggle(this, 'fade-in-left')
-        .addIndicators({
+        /*.addIndicators({
             name: 'First Scene Items'
-        })
+        })*/
         .addTo(controller);
         
     });
@@ -251,9 +251,9 @@ function initScrollMagic(){
     })
     .setPin("#pinContainer")
     .setTween(wipeAnimation)
-    .addIndicators({
+    /*.addIndicators({
         name: 'Panels Scene'
-    })
+    })*/
     .addTo(controller);
     
 }
