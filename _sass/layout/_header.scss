@@ -128,10 +128,12 @@
         
     }
     
-    &:hover {
-        span {
-            width: 100%;
-            background-color: $black;
+    @media (hover) {
+        &:hover {
+            span {
+                width: 100%;
+                background-color: $black;
+            }
         }
     }
     
@@ -177,23 +179,25 @@
         
     }
     
-    &:hover {
-        @include border-radius(0);
-        span {
-           transform: rotate(0deg); 
-            display: block;
-            margin: 0 auto 4px auto;
-            @include border-radius(0px);
+    @media (hover) {
+        &:hover {
+            @include border-radius(0);
+            span {
+               transform: rotate(0deg); 
+                display: block;
+                margin: 0 auto 4px auto;
+                @include border-radius(0px);
 
-            &:last-child {
-                margin: 0 auto;
+                &:last-child {
+                    margin: 0 auto;
+                }
+
+                &.hide-open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
             }
-            
-            &.hide-open {
-                opacity: 1;
-                visibility: visible;
-            }
-            
         }
     }
     
