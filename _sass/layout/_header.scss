@@ -128,12 +128,10 @@
         
     }
     
-    @media (min-width: 768px) {
-        &:hover {
-            span {
-                width: 100%;
-                background-color: $black;
-            }
+    &:hover {
+        span {
+            width: 100%;
+            background-color: $black;
         }
     }
     
@@ -179,25 +177,23 @@
         
     }
     
-    @media (min-width: 768px) {
-        &:hover {
-            @include border-radius(0);
-            span {
-               transform: rotate(0deg); 
-                display: block;
-                margin: 0 auto 4px auto;
-                @include border-radius(0px);
+    &:hover {
+        @include border-radius(0);
+        span {
+           transform: rotate(0deg); 
+            display: block;
+            margin: 0 auto 4px auto;
+            @include border-radius(0px);
 
-                &:last-child {
-                    margin: 0 auto;
-                }
-
-                &.hide-open {
-                    opacity: 1;
-                    visibility: visible;
-                }
-
+            &:last-child {
+                margin: 0 auto;
             }
+            
+            &.hide-open {
+                opacity: 1;
+                visibility: visible;
+            }
+            
         }
     }
     
