@@ -257,3 +257,16 @@ function initScrollMagic(){
     .addTo(controller);
     
 }
+
+// MENU HOVER
+var $menuItem = $('#toggleMenu');
+$menuItem.on('touchstart mouseenter focus', function(e) {
+    if(e.type == 'touchstart') {
+        // Don't trigger mouseenter even if they hold
+        e.stopImmediatePropagation();
+        // If $item is a link (<a>), don't go to said link on mobile, show menu instead
+        e.preventDefault();
+    }
+
+    // Show the submenu here
+});
