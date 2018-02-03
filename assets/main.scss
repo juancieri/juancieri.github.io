@@ -169,6 +169,34 @@ img {
     outline: none !important;
     transition: 0.3s;
     text-transform: uppercase;
+    
+    &-telegram, &-telegram:visited, &-whatsapp, &-whatsapp:visited {
+        color: #27A5E7;
+        font-size: 50px;
+        border: 3px solid $white;
+        padding: 0;
+        @include border-radius(50%);
+        line-height: 0;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        &:hover {
+            color: darken(#27A5E7, 10);
+            -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+            -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+            box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+        }
+    }
+    
+    &-whatsapp, &-whatsapp:visited {
+        color: #25d366;
+        width: 56px;
+        &:hover {
+            color: $white;
+            background-color: #25d366;
+        }
+    }
+    
 }
 
 // BG
