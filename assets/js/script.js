@@ -257,3 +257,8 @@ function initScrollMagic(){
     .addTo(controller);
     
 }
+
+/* BARBA JS */
+function initBarbaJS() {
+    Barba.Pjax.start();
+}

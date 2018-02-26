@@ -25,6 +25,7 @@ google_analytics: UA-46904125-4
 # Build settings
 markdown: kramdown
 theme: minima
+permalink: /:categories/:title:output_ext
 
 plugins:
   - jekyll-feed

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="barba-container" itemscope itemtype="http://schema.org/BlogPosting">
     
     <header class="post-header">
         <div class="container">
@@ -62,7 +62,7 @@ layout: default
                             {% endfor %}
                             <li>
                                 {% if prev_post %}
-                                <a href="{{ prev_post }}">
+                                <a href="{{ prev_post }}" class="prev">
                                     <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ prev_post_date | date: date_format }}</em>
                                     <h6>{{prev_post_title}}</h6>
                                 </a>
@@ -70,7 +70,7 @@ layout: default
                             </li>
                             <li>
                                 {% if next_post %}
-                                <a href="{{ next_post }}">
+                                <a href="{{ next_post }}" class="next">
                                     <em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ next_post_date | date: date_format }}</em>
                                     <h6>{{next_post_title}}</h6>
                                 </a>
