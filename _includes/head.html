@@ -36,8 +36,6 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     
-  <!-- JQuery-->
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <!-- Font Awesome-->
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]>
@@ -46,12 +44,19 @@
     
   <!-- Facebook Open Graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+  <meta property="og:locale" content="es_AR" />
   <meta property="og:type" content="" />
   <meta property="og:url" content="{{site.url}}" />
   <meta property="og:image" content="" />
+  <meta property="og:site_name" content="{{ site.title }} | {{ page.title }}" />
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
+
+  <script type="application/ld+json">
+    {"name":"Juan Cieri - Diseño Gráfico y Web","description":"Me especializo en el diseño y desarrollo de sitios web. Ofrezco soluciones integrales a empresas y profesionales para conectar con sus usuarios.","author":Juan Cieri,"@type":"WebSite","url":"http://juancieri.github.io/","publisher":Juan Cieri,"image":null,"headline":"home","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}
+   </script>
+      
 </head>
