@@ -16,6 +16,12 @@ html, body {
         font-size: 14px;
     }
 }
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
 .page-overlay {
     position: fixed;
     z-index: 2;
