@@ -28,6 +28,13 @@ layout: default
                             </div>
                         </div>
                         <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><em>{% assign date_format = site.minima.date_format | default: "%-d %b, %Y" %} {{ page.date | date: date_format }}</em></time></p>
+                        <div id="share-top">
+                            <ul class="share-btns">
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//juancieri.github.io{{page.url}}" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/home?status=https%3A//juancieri.github.io{{page.url}}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//twitter.com/home?status=https%253A//juancieri.github.io{{page.url}}&title={{page.title}}source=Juan%20Cieri%20-%20Dise%C3%B1o%20Gr%C3%A1fico%20y%20Web" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- /date -->
                     
