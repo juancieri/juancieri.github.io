@@ -115,6 +115,7 @@
                 }
             }
         }
+        
     }
     
 }
@@ -148,6 +149,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+
+    &.design {
+        background-image: url(../../assets/img/design-thumb.gif);
+    }
+    
+    &.posicionamiento {
+        background-image: url(../../assets/img/posicionamiento-thumb.gif);
+    }
+    
+    &.coding {
+        background-image: url(../../assets/img/coding-thumb.gif);
+    }
     
     &.full {
         height: 100%;
