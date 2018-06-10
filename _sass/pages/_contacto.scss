@@ -1,0 +1,70 @@
+#contactSection {
+    position: relative;
+    margin: 100px 50px 180px 50px;
+    
+    .bg-img {
+        background-image: url(../../assets/img/me.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .bg-primary {
+        padding: 40px;
+    }
+    
+    p {
+        
+        a {
+            background-color: $white;
+            padding: 3px 6px;
+            color: $primary-color;
+            transition: 0.3s;
+            
+            &:hover {
+                text-decoration: none;
+                background-color: $black;
+                color: $white;
+            }
+            
+        }
+        
+    }
+    
+    blockquote {
+        border-color: $black;
+        font-size: 14px;
+        color: $white;
+        letter-spacing: 0.5px;
+    }
+    
+}
+
+.contact-info {
+    
+    a {
+        color: $white;
+        display: inline-block;
+        transition: 0.3s;
+        text-decoration: none;
+        font-size: 40px;
+        position: relative;
+        margin: 0 0 40px 0;
+        
+        &:before {
+            content: "";
+            height: 2px;
+            width: 40px;
+            background-color: $white;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+    }
+    
+}

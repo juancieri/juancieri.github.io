@@ -34,6 +34,7 @@
             color: $gray;
             font-size: 18px;
             @include font-size(18px);
+            margin: 0;
         }
         
     }
@@ -166,3 +167,54 @@
     }
 }
 
+#share-top {
+    position: absolute;
+    right: 15px;
+    width: 100%;
+    max-width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#share-bottom {
+    width: 100%;
+    position: relative;
+    margin: 30px 0;
+    display: block;
+}
+
+.share-btns {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    li {
+        flex-grow: 1;
+        text-align: center;
+        border: 1px solid white;
+    }
+    
+    a {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(lightgray, .6);
+        color: rgba(black, .5);
+        transition: 0.3s;
+        
+        &:hover {
+            color: white;
+            text-decoration: none;
+            background-color: black;
+        }
+        
+    }
+    
+}

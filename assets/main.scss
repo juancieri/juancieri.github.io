@@ -169,6 +169,17 @@ img {
     }
     
 }
+.big-title {
+    position: absolute;
+    top: -43px;
+    font-size: 140px;
+    color: $black;
+    font-weight: 700;
+    line-height: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
 
 // BUTTONS
 .btn {
@@ -375,6 +386,7 @@ img {
 @import 'pages/_blog';
 @import 'pages/_portfolio';
 @import 'pages/_sobremi';
+@import 'pages/_contacto';
 
 // CUSTOM SCROLLBAR
 @include scrollbars(.5em, $primary-color);
