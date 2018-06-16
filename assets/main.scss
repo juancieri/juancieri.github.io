@@ -296,6 +296,48 @@ img {
     
 }
 
+// CTA MODULE
+.cta-module {
+    background-color: lighten(lightgray, 10);
+    padding: 60px 0 90px 0;
+    position: relative;
+    margin-bottom: -40px;
+    
+    &-title {
+        font-family: $roboto;
+        font-weight: 900;
+        margin: 0 0 30px 0;
+        font-size: 30px;
+        @include font-size(30px);
+    }
+    
+    &-btn {
+        display: inline-block;
+        font-size: 50px;
+        @include font-size(50px);
+        color: $black;
+        border: 8px solid $white;
+        @include border-radius(50%);
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        position: absolute;
+        margin-bottom: -0px;
+        z-index: 2;
+        background-color: $white;
+        transition: 0.3s;
+        left: 50%;
+        transform: translate(-50%);
+        
+        &:hover, &:focus {
+            color: $white;
+            background-color: $black;
+        }
+    }
+    
+}
+
+
 // ANIMATIONS
 @keyframes glitch { 
   0% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}

@@ -115,6 +115,7 @@
     font-size: 48px;
     @include font-size(48px);
     margin: 0 auto 30px auto;
+    
     @include media-xs {
         padding: 10px 15px;
         font-size: 24px;
@@ -134,7 +135,7 @@
     text-align: center;
     font-weight: 700;
     line-height: normal;
-    display: inline-block;
+    display: block;
     @include media-xs {
         font-size: 14px;
         @include font-size(14px);
@@ -148,7 +149,7 @@
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
     background-color: $white;
-    display: inline;
+    display: none;
     margin-left: 3px;
 }
 @keyframes blink{

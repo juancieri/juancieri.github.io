@@ -64,6 +64,12 @@
             max-width: 70%;
             padding-bottom: 30px;
             transition: all 0.2s ease-out;
+            
+            @include media-xs {
+                max-width: 100%;
+                padding: 0;
+            }
+            
         }
         
         &-block {
@@ -74,6 +80,13 @@
             right: 0;
             bottom: 0;
             transition: all 0.4s ease-out;
+            
+            @include media-xs {
+                max-width: 90%;
+                position: relative;
+                margin: 0 auto;
+            }
+            
         }
         
         &-title {
@@ -95,7 +108,7 @@
             .item-img, .item-block {
                 transform: translateX(-190px);
                 @include media-xs {
-                    transform: translateX(-50px);
+                    transform: translateX(0px);
                 }
             }
         }
@@ -156,6 +169,7 @@
 
     &.design {
         background-image: url(../../assets/img/design-thumb.gif);
+        background-color: $gray;
     }
     
     &.posicionamiento {
@@ -164,6 +178,7 @@
     
     &.coding {
         background-image: url(../../assets/img/coding-thumb.gif);
+        background-color: $black;
     }
     
     &.full {
