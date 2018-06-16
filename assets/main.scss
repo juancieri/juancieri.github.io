@@ -9,6 +9,9 @@
 @import 'components/_fonts';
 @import 'layout/_grid';
 
+@import '../assets/animate.min.css';
+@import '../assets/owl.carousel.min.css';
+
 // COMMMON
 html, body {
     font-size: 16px;
@@ -26,7 +29,7 @@ html, body {
 
 .page-overlay {
     position: fixed;
-    z-index: 2;
+    z-index: 998;
     background: rgba(0,0,0,.7);
     top: 0;
     bottom: 0;
