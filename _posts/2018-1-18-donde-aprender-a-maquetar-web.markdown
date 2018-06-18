@@ -2,7 +2,7 @@
 layout: post
 title:  "¿Dónde aprender a maquetar web?"
 date:   2018-1-18 23:05:00 -0300
-image: video-header.jpg
+image: donde-aprender-a-maquetar-web.gif
 long_description: 'Sitios, plataformas y recursos para aprender a maquetar y no morir en el intento'
 categories: blog
 ---
@@ -14,3 +14,7 @@ Ahora en serio, hace tiempo que vengo siguiendo algunos sitios y plataformas onl
 -Codecademy  
 -I Hate Tomatoes  
 -CodyHouse  
+
+Y recuerden: "No te preocupes si no funciona bien. Si todo lo que se hizo lo hiciera, estarías sin trabajo.".
+
+Hasta la próxima!

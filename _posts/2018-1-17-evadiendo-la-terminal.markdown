@@ -14,3 +14,7 @@ Sí, odiamos la terminal. No logramos recordar los procesos, los comandos, nos a
 -GitHub Desktop  
 -Prepros  
 -SourceTree  
+
+Y recuerden: "No te preocupes si no funciona bien. Si todo lo que se hizo lo hiciera, estarías sin trabajo.".
+
+Hasta la próxima!

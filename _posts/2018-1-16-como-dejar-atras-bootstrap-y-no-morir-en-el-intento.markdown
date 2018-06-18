@@ -48,3 +48,7 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+Y recuerden: "No te preocupes si no funciona bien. Si todo lo que se hizo lo hiciera, estarías sin trabajo.".
+
+Hasta la próxima!

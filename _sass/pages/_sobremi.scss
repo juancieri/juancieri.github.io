@@ -37,6 +37,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        @include media-xs {
+            height: auto;
+            position: relative;
+        }
+        
     }
     
     &.first {
@@ -166,6 +172,10 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: auto 100%;
+    
+    @include media-xs {
+        height: 220px;
+    }
 
     &.design {
         background-image: url(../../assets/img/design-thumb.gif);
