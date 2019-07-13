@@ -24,10 +24,13 @@ html, body {
 
 .primary {
     color: $primary-color;
+    transition: 0.3s;
+    
     &:hover {
         text-decoration: none;
         color: #57dfb7;
     }
+    
 }
 
 .vcenter {
