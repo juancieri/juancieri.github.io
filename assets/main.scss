@@ -22,6 +22,14 @@ html, body {
     }
 }
 
+.primary {
+    color: $primary-color;
+    &:hover {
+        text-decoration: none;
+        color: #57dfb7;
+    }
+}
+
 .vcenter {
     display: flex;
     align-items: center;

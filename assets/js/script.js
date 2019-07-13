@@ -335,7 +335,7 @@ function initWhatsappChat() {
     if (mobileDetect) {
         $('#float-cta .whatsapp-msg-container').css('display','none');
         $('#float-cta > a').on('click', function(){
-            window.location = 'https://api.whatsapp.com/send?phone=541161854503';
+            window.location = 'https://api.whatsapp.com/send?phone=5491146744023';
         });
     } else {
         $('#float-cta > a').click(function(){
@@ -344,11 +344,17 @@ function initWhatsappChat() {
             $('#float-cta').toggleClass('open');
         });
         
+        $('.whatsapp-msg-close').click(function(){
+            $('#float-cta > a').toggleClass('open');
+            $('#float-cta .whatsapp-msg-container').toggleClass('open');
+            $('#float-cta').toggleClass('open');
+        });
+        
         $('.btn-whatsapp-send').on('click', function(event){
             event.stopPropagation();
         });
         $('.btn-whatsapp-send').click(function() {
-            var baseUrl = 'https://web.whatsapp.com/send?phone=541161854503&text=';
+            var baseUrl = 'https://web.whatsapp.com/send?phone=5491146744023&text=';
             var textEncode = encodeURIComponent($('#float-cta .whatsapp-msg-body textarea').val());
             window.open(baseUrl + textEncode, '_blank');
         });

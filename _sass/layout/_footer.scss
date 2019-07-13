@@ -211,7 +211,7 @@ footer {
         opacity: 0;
         transform: translateY(-70px);
         width: 300px;
-        overflow: hidden;
+        //overflow: hidden;
         -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.1);
         -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.1);
         box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.1);
@@ -239,6 +239,26 @@ footer {
             margin: 0;
         }
         
+    }
+    
+    .whatsapp-msg-close {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        background-color: white;
+        color: $black;
+        border: 2px solid black;
+        @include border-radius(50%);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        transition: 0.3s;
+        &:hover {
+            background-color: black;
+            color: $white;
+        }
     }
     
     .whatsapp-msg-body {
@@ -292,4 +312,9 @@ footer {
             display: none;
         }
     }
+    
+    @include media-xs {
+        display: none;
+    }
+    
 }
